@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 19 19 19;
+    --foreground: 229 226 225;
+  }
+
+  html,
+  body {
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body, aside, header, main, div, input, textarea, button, nav {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  /* Custom scrollbar matching DESIGN.md & code.html */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #131313;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #353534;
+    border-radius: 9999px;
+    border: 2px solid #131313;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e46f45;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #353534 #131313;
+  }
+
+  /* Light mode theme styling */
+  html.light-mode,
+  html.light-mode body {
+    background-color: #F8F7F4 !important;
+    color: #1E1E1E !important;
+  }
+
+  html.light-mode aside {
+    background-color: #F1EFEA !important;
+    border-right: 1px solid #E4E0D7 !important;
+  }
+
+  html.light-mode header {
+    background-color: rgba(248, 247, 244, 0.85) !important;
+    border-bottom: 1px solid #E4E0D7 !important;
+  }
+
+  html.light-mode main,
+  html.light-mode .main-content-wrapper {
+    background-color: #F8F7F4 !important;
+  }
+
+  html.light-mode .bg-surface-dim {
+    background-color: #F8F7F4 !important;
+  }
+
+  html.light-mode .bg-surface {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E6E2D8 !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  html.light-mode .bg-surface-container {
+    background-color: #EBE7E0 !important;
+    color: #1E1E1E !important;
+  }
+
+  html.light-mode .bg-surface-container-high {
+    background-color: #E3DFD6 !important;
+  }
+
+  html.light-mode .bg-surface-container-highest {
+    background-color: #DDD8CD !important;
+  }
+
+  html.light-mode .bg-surface-container-low {
+    background-color: #F1EFEA !important;
+  }
+
+  html.light-mode .bg-secondary-container {
+    background-color: #EBE7E0 !important;
+    color: #1E1E1E !important;
+  }
+
+  html.light-mode .text-on-surface {
+    color: #1F1F1F !important;
+  }
+
+  html.light-mode .text-on-surface-variant {
+    color: #524B46 !important;
+  }
+
+  html.light-mode .text-muted {
+    color: #766E67 !important;
+  }
+
+  html.light-mode textarea {
+    color: #1F1F1F !important;
+  }
+
+  html.light-mode textarea::placeholder,
+  html.light-mode input::placeholder {
+    color: #9B948C !important;
+  }
+
+  html.light-mode .border-surface-container-high,
+  html.light-mode .border-surface-container-high\/40,
+  html.light-mode .border-surface-container-high\/30,
+  html.light-mode .border-surface-container-highest,
+  html.light-mode .border-surface-container-highest\/20,
+  html.light-mode .border-surface-container-highest\/30 {
+    border-color: #E4E0D7 !important;
+  }
+
+  html.light-mode #customize-modal > div {
+    background-color: #FFFFFF !important;
+    border-color: #E4DFD5 !important;
+    color: #1E1E1E !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  html.light-mode ::-webkit-scrollbar-track {
+    background: #F8F7F4;
+  }
+
+  html.light-mode ::-webkit-scrollbar-thumb {
+    background: #DDD8CD;
+    border: 2px solid #F8F7F4;
+  }
+
+  html.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #e46f45;
+  }
+}
+
+@layer utilities {
+  .text-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+  .text-headline-md {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+  .text-headline-sm {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  .text-title-md {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .text-body-lg {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .text-body-md {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .text-label-md {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .text-label-sm {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
